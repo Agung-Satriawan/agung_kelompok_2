@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 2 - Desain UI/UX & Pemrograman Web</title>
+    <style>
+        /* Gaya Dasar Halaman */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f0f4f8;
+            color: #333333;
+        }
+
+        /* 1. Header: Biru Gradasi */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+        }
+        header p {
+            margin: 0;
+            font-size: 16px;
+            color: #d0e1fd;
+        }
+
+        /* 2. Bagian Intro */
+        .intro-box {
+            background-color: #e6f7ff;
+            border-left: 5px solid #0099ff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .intro-box h2 {
+            margin-top: 0;
+            color: #005299;
+        }
+
+        /* Layout Grid 2 Kolom untuk Kartu Anggota */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* 3. Kartu Anggota Biodata */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+            border: 1px solid #e1e8ed;
+        }
+
+        /* Warna Header Kartu Berbeda-beda */
+        .card-header {
+            padding: 12px 15px;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .card-header span {
+            background-color: rgba(255, 255, 255, 0.25);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .card-1 .card-header { background-color: #0d6efd; } /* Biru */
+        .card-2 .card-header { background-color: #198754; } /* Hijau */
+        .card-3 .card-header { background-color: #6f42c1; } /* Ungu */
+        .card-4 .card-header { background-color: #fd7e14; } /* Oranye */
+
+        .card-body {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+        }
+        .card-body figure {
+            margin: 0;
+            width: 100px;
+            height: 120px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ced4da;
+            border-radius: 6px;
+        }
+        .card-body img {
+            width: 100px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        td.label {
+            font-weight: bold;
+            color: #495057;
+            width: 32%;
+        }
+
+        /* 4. Bagian Moto Kelompok */
+        .motto-section {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+            border-top: 4px solid #6f42c1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .motto-section h2 {
+            margin-top: 0;
+            color: #6f42c1;
+            font-size: 22px;
+        }
+        .motto-box {
+            background-color: #f3e8ff;
+            border: 1px dashed #6f42c1;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        .motto-box blockquote {
+            margin: 0;
+            font-style: italic;
+            font-size: 18px;
+            color: #4c1d95;
+            font-weight: 500;
+        }
+
+        /* 5. Footer */
+        footer {
+            background-color: #212529;
+            color: #adb5bd;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Halaman -->
+    <header>
+        <h1>Kelompok 1</h1>
+        <p>Desain UI/UX & Pemrograman Web</p>
+    </header>
+
+    <!-- Bagian Intro -->
+    <section class="intro-box">
+        <h2>Intro</h2>
+        <p>"Halo dan selamat datang! Kami dari Kelompok 2, sekelompok mahasiswa STT Terpadu Nurul Fikri yang berdedikasi menciptakan inovasi digital. Di halaman ini, Anda dapat mengenal lebih dekat para anggota tim kami yang saling melengkapi dalam mengasah keterampilan Desain UI/UX dan Pemrograman Web."</p>
+    </section>
+
+    <!-- Konten Utama: Grid Kartu Anggota -->
+    <main class="grid-container">
+
+        <!-- Anggota 1 (Biru) -->
+        <article class="card card-1">
+            <div class="card-header">
+                <h3> Agung Satriawan</h3>
+            </div>
+            <div class="card-body">
+                <figure>
+                    <img src="assets/img/fotoagung.jpeg" alt="Foto Anggota 1" onerror="this.style.display='none'">
+                </figure>
+                <table>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td>: 0110226068</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Prodi</td>
+                        <td>: Teknik Informatika</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NO TLP</td>
+                        <td>: 083832546699</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Domisili</td>
+                        <td>: Kelapa Dua</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Hobi</td>
+                        <td>: Membaca Buku</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+
+        <!-- Anggota 2 (Hijau) -->
+        <article class="card card-2">
+            <div class="card-header">
+                <h3>Ahmad Reza Siregar</h3>
+            </div>
+            <div class="card-body">
+                <figure>
+                    <img src="assets/img/fotosiregar.jpeg" alt="Foto Anggota 2" onerror="this.style.display='none'">
+                </figure>
+                <table>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td>: 0110226155</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Prodi</td>
+                        <td>: Teknik Informatika</td>
+                    </tr>
+                     <tr>
+                        <td class="label">NO Telp</td>
+                        <td>: 085788319418</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Domisili</td>
+                        <td>: Pondok Cina</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Hobi</td>
+                        <td>: Bermain Game</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+
+        <!-- Anggota 3 (Ungu) -->
+        <article class="card card-3">
+            <div class="card-header">
+                <h3>Aida Afifah</h3>
+            </div>
+            <div class="card-body">
+                <figure>
+                    <img src="assets/img/fotoaida.jpeg" alt="Foto Anggota 3" onerror="this.style.display='none'">
+                </figure>
+                <table>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td>: 0110226046</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Prodi</td>
+                        <td>: Teknik Informatika</td>
+                    </tr>
+                      <tr>
+                        <td class="label">NO Telp</td>
+                        <td>: 089639706078</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Domisili</td>
+                        <td>: Sukmajaya</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Hobi</td>
+                        <td>: Menulis</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+
+        <!-- Anggota 4 (Oranye) -->
+        <article class="card card-4">
+            <div class="card-header">
+                <h3>Ahmad Fathurrahman Ramdhani</h3>
+            </div>
+            <div class="card-body">
+                <figure>
+                    <img src="assets/img/fotoahmad.jpeg" alt="Foto Anggota 4" onerror="this.style.display='none'">
+                </figure>
+                <table>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td>: 0110226133</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Prodi</td>
+                        <td>: Teknik Informatika</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NO Telp</td>
+                        <td>: 085820645698</td>
+                    <tr>
+                        <td class="label">Domisili</td>
+                        <td>: Pondok Cina</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Hobi</td>
+                        <td>: Olahraga</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer Halaman -->
+    <footer>
+        <p> Copyright &copy; STT Terpadu Nurul Fikri - Praktikum 2 HTML</p>
+    </footer>
+
+</body>
+</html>
